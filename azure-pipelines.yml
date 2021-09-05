@@ -19,6 +19,6 @@ steps:
   inputs:
     azureSubscription: 'Azure for Students(a5869eb9-8803-4db6-90a6-930e008408e7)'
     appType: 'webAppLinux'
-    appName: 'myapp-service-plan'
+    appName: 'my-app-dotnet-win-drodriguez'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
     runtimeStack: 'DOTNETCORE|3.1'
