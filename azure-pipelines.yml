@@ -16,6 +16,13 @@ variables:
 
 steps:
 - task: NuGetToolInstaller@1
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Azure for Students(a5869eb9-8803-4db6-90a6-930e008408e7)'
+    appType: 'webAppLinux'
+    appName: 'myapp-service-plan'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    runtimeStack: 'DOTNETCORE|3.1'
 
 - task: NuGetCommand@2
   inputs:
@@ -32,3 +39,4 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+    batchingBasedOnAgentsOption
