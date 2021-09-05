@@ -17,7 +17,7 @@ steps:
     publishWebProjects: true
 - task: AzureWebApp@1
   inputs:
-    zureSubscription: 'Azure for Students(a5869eb9-8803-4db6-90a6-930e008408e7)'
+    azureSubscription: 'Azure for Students(a5869eb9-8803-4db6-90a6-930e008408e7)'
     appType: 'webAppLinux'
     appName: 'myapp-service-plan'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
